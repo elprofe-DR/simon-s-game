@@ -7,6 +7,10 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
+if ($(window).width() < 960) {
+  $("#level-title").text("Touch HERE to Start!");
+}
+
 $(document).on("keypress touchstart", function() {
   if (!started) {
     $("#level-title").text("Level " + level);
